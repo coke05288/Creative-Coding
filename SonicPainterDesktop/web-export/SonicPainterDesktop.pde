@@ -10,7 +10,7 @@ AudioPlayer player2;
 
 void setup()
 {
-  size(640, 960);
+  size(640, 940);
   maxim = new Maxim(this);
   player = maxim.loadFile("atmos1.wav");
   player.setLooping(true);
@@ -48,7 +48,7 @@ void mouseDragged()
   stroke(red, green, blue, 255);
   strokeWeight(lineWidth);
   
-  //rect(mouseX, mouseY, speed, speed);
+  rect(mouseX, mouseY, speed, speed);
   line(pmouseX, pmouseY,mouseX, mouseY);
   //brush1(mouseX, mouseY,speed, speed,lineWidth);
   //brush2(mouseX, mouseY,speed, speed,lineWidth);
@@ -57,7 +57,7 @@ void mouseDragged()
 
   //brush5(pmouseX, pmouseY,mouseX, mouseY,lineWidth);
   //brush6(mouseX, mouseY,speed, speed,lineWidth);
-  //brush7(pmouseX, pmouseY,mouseX, mouseY,lineWidth);
+  brush7(pmouseX, pmouseY,mouseX, mouseY,lineWidth);
 
   player.setFilter((float) mouseY/height*5000,mouseX / width);
   //player2.setFilter((float) mouseY/height*5000,mouseX / width);
