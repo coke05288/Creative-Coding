@@ -62,5 +62,3 @@ void mousePressed()
     player.stop();
   }
 }
-
-
