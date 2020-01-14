@@ -1,20 +1,12 @@
-/*
-The MIT License (MIT)
- 
- Copyright (c) 2013 Mick Grierson, Matthew Yee-King, Marco Gillies
- 
- Permission is hereby granted, free of charge, to any person obtaining a copy of 
- this software and associated documentation files (the "Software"), to 
- deal in the Software without restriction, including without limitation 
- the rights to use, copy, modify, merge, publish, distribute, sublicense, 
- and/or sell copies of the Software, and to permit persons to whom the 
- Software is furnished to do so, subject to the following conditions:
- 
- The above copyright notice and this permission notice shall be included 
- in  all copies or substantial portions of the Software.
- 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
+//The MIT License (MIT)
+
+//Copyright (c) 2013 Mick Grierson, Matthew Yee-King, Marco Gillies
+
+//Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+//The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+//THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 
 import java.util.ArrayList;
 import java.io.File;
@@ -691,89 +683,89 @@ public class FXChain {
 //  * Represents an audio source is streamed as opposed to being completely loaded (as WavSource is)
 //  */
 // public class AudioStreamPlayer {
-//   /** a class from the android API*/
-//   private MediaPlayer mediaPlayer;
-//   /** a class from the android API*/
-//   private Visualizer viz; 
-//   private byte[] waveformBuffer;
-//   private byte[] fftBuffer;
-//   private byte[] powerSpectrum;
+// 	/** a class from the android API*/
+// 	private MediaPlayer mediaPlayer;
+// 	/** a class from the android API*/
+// 	private Visualizer viz; 
+// 	private byte[] waveformBuffer;
+// 	private byte[] fftBuffer;
+// 	private byte[] powerSpectrum;
 
-//   /**
-//    * create a stream source from the sent url 
-//    */
-//   public AudioStreamPlayer(String url) {
-//       try {
-//     mediaPlayer = new MediaPlayer();
-//     //mp.setAuxEffectSendLevel(1);
-//     mediaPlayer.setLooping(true);
+// 	/**
+// 	 * create a stream source from the sent url 
+// 	 */
+// 	public AudioStreamPlayer(String url) {
+// 	    try {
+// 		mediaPlayer = new MediaPlayer();
+// 		//mp.setAuxEffectSendLevel(1);
+// 		mediaPlayer.setLooping(true);
 
-//     // try to parse the URL... if that fails, we assume it
-//     // is a local file in the assets folder
-//     try {
-//         URL uRL = new URL(url);
-//         mediaPlayer.setDataSource(url);
-//     }
-//     catch (MalformedURLException eek) {
-//         // couldn't parse the url, assume its a local file
-//         AssetFileDescriptor afd = getAssets().openFd(url);
-//         //mp.setDataSource(afd.getFileDescriptor(),afd.getStartOffset(),afd.getLength());
-//         mediaPlayer.setDataSource(afd.getFileDescriptor());
-//         afd.close();
-//     }
+// 		// try to parse the URL... if that fails, we assume it
+// 		// is a local file in the assets folder
+// 		try {
+// 		    URL uRL = new URL(url);
+// 		    mediaPlayer.setDataSource(url);
+// 		}
+// 		catch (MalformedURLException eek) {
+// 		    // couldn't parse the url, assume its a local file
+// 		    AssetFileDescriptor afd = getAssets().openFd(url);
+// 		    //mp.setDataSource(afd.getFileDescriptor(),afd.getStartOffset(),afd.getLength());
+// 		    mediaPlayer.setDataSource(afd.getFileDescriptor());
+// 		    afd.close();
+// 		}
 
-//     mediaPlayer.prepare();
-//     //mediaPlayer.start();
-//     //System.out.println("Created audio with id "+mediaPlayer.getAudioSessionId());
-//     viz = new Visualizer(mediaPlayer.getAudioSessionId());
-//     viz.setEnabled(true);
-//     waveformBuffer = new byte[viz.getCaptureSize()];
-//     fftBuffer = new byte[viz.getCaptureSize()/2];
-//     powerSpectrum = new byte[viz.getCaptureSize()/2];
-//       }
-//       catch (Exception e) {
-//     System.out.println("StreamSource could not be initialised. Check url... "+url+ " and that you have added the permission INTERNET, RECORD_AUDIO and MODIFY_AUDIO_SETTINGS to the manifest,");
-//     e.printStackTrace();
-//       }
-//   }
+// 		mediaPlayer.prepare();
+// 		//mediaPlayer.start();
+// 		//System.out.println("Created audio with id "+mediaPlayer.getAudioSessionId());
+// 		viz = new Visualizer(mediaPlayer.getAudioSessionId());
+// 		viz.setEnabled(true);
+// 		waveformBuffer = new byte[viz.getCaptureSize()];
+// 		fftBuffer = new byte[viz.getCaptureSize()/2];
+// 		powerSpectrum = new byte[viz.getCaptureSize()/2];
+// 	    }
+// 	    catch (Exception e) {
+// 		System.out.println("StreamSource could not be initialised. Check url... "+url+ " and that you have added the permission INTERNET, RECORD_AUDIO and MODIFY_AUDIO_SETTINGS to the manifest,");
+// 		e.printStackTrace();
+// 	    }
+// 	}
 
-//   public void play() {
-//       mediaPlayer.start();
-//   }
+// 	public void play() {
+// 	    mediaPlayer.start();
+// 	}
 
-//   public int getLengthMs() {
-//       return mediaPlayer.getDuration();
-//   }
+// 	public int getLengthMs() {
+// 	    return mediaPlayer.getDuration();
+// 	}
 
-//   public void cue(float timeMs) {
-//       if (timeMs >= 0 && timeMs < getLengthMs()) {// ignore crazy values
-//     mediaPlayer.seekTo((int)timeMs);
-//       }
-//   }
+// 	public void cue(float timeMs) {
+// 	    if (timeMs >= 0 && timeMs < getLengthMs()) {// ignore crazy values
+// 		mediaPlayer.seekTo((int)timeMs);
+// 	    }
+// 	}
 
-//   /**
-//    * Returns a recent snapshot of the power spectrum as 8 bit values
-//    */
-//   public byte[] getPowerSpectrum() {
-//       // calculate the spectrum
-//       viz.getFft(fftBuffer);
-//       short real, imag;
-//       for (int i=2;i<fftBuffer.length;i+=2) {
-//     real = (short) fftBuffer[i];
-//     imag = (short) fftBuffer[i+1];
-//     powerSpectrum[i/2] = (byte) ((real * real)  + (imag * imag));
-//       }
-//       return powerSpectrum;
-//   }
+// 	/**
+// 	 * Returns a recent snapshot of the power spectrum as 8 bit values
+// 	 */
+// 	public byte[] getPowerSpectrum() {
+// 	    // calculate the spectrum
+// 	    viz.getFft(fftBuffer);
+// 	    short real, imag;
+// 	    for (int i=2;i<fftBuffer.length;i+=2) {
+// 		real = (short) fftBuffer[i];
+// 		imag = (short) fftBuffer[i+1];
+// 		powerSpectrum[i/2] = (byte) ((real * real)  + (imag * imag));
+// 	    }
+// 	    return powerSpectrum;
+// 	}
 
-//   /**
-//    * Returns a recent snapshot of the waveform being played 
-//    */
-//   public byte[] getWaveForm() {
-//       // retrieve the waveform
-//       viz.getWaveForm(waveformBuffer);
-//       return waveformBuffer;
-//   }
+// 	/**
+// 	 * Returns a recent snapshot of the waveform being played 
+// 	 */
+// 	public byte[] getWaveForm() {
+// 	    // retrieve the waveform
+// 	    viz.getWaveForm(waveformBuffer);
+// 	    return waveformBuffer;
+// 	}
 // } 
 
 /**

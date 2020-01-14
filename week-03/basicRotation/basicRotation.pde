@@ -25,7 +25,7 @@ void draw() {/* this does the drawing once per frame */
     /* this for loop organises the drawing. It will do the drawing 20 times (between 0 and 19)  */
     rotate(time); 
     /* rotate the coordinate system a bit */
-    rect(i, i, i*5, i*5); 
+    rect(i*12, i, i*5, i*5); 
     /* this is the actual drawing.
     This says 'Draw a line, starting from i,i (x and y location), and being of size i*5 in both width and depth
     because it's in a for loop, it gets 'called' (used) 20 times, with a different value for 'i' each time */
