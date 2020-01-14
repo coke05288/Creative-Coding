@@ -1,4 +1,4 @@
-\#\#\# "Creative Programming for Digital Media & Mobile App"
+### "Creative Programming for Digital Media & Mobile App"
 ------------------------------------------------------------
 
 이 레포는 Coursera에 공개된 런던 대학교의 "Creative Programming for
@@ -38,5 +38,6 @@ graphics \* \*Work with a 2D physics engine to create a basic game
 
 -   주차별 예제 Copyright (c) 2013 Mick Grierson, Matthew Yee-King,
     Marco Gillies
--   개인 미니 프로젝트 Copyright (c) 2020 YoungJun Kim
+-   개인 미니 프로젝트 Copyright (c) 2020 YoungJun Kim / (c) 2013 Mick Grierson, Matthew Yee-King,
+    Marco Gillies
 
